@@ -1,0 +1,41 @@
+{
+  "name": "entu-ssg-app",
+  "public": false,
+  "productName": "Entu SSG application",
+  "version": "5.0.0",
+  "author": "Argo Roots <argo@roots.ee>",
+  "description": "Simple Pug (Jade), Markdown, Yaml static site generator",
+  "keywords": [
+    "ssg",
+    "cms",
+    "static",
+    "html",
+    "jade",
+    "pug",
+    "markdown",
+    "yaml"
+  ],
+  "homepage": "https://entu.site",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/entu/ssg-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/entu/ssg-app/issues"
+  },
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron src/main.js",
+    "pack": "electron-packager . --overwrite --asar --out=release"
+  },
+  "dependencies": {
+    "async": "3.0.1",
+    "entu-ssg": "5.0.0",
+    "simple-git": "1.113.0"
+  },
+  "devDependencies": {
+    "electron": "4.1.4",
+    "electron-packager": "13.1.1"
+  }
+}
