@@ -1,7 +1,7 @@
 {
   "name": "entu-ssg-app",
   "public": false,
-  "productName": "Entu SSG application",
+  "productName": "Entu SSG",
   "version": "5.0.3",
   "author": "Argo Roots <argo@roots.ee>",
   "description": "Simple Pug (Jade), Markdown, Yaml static site generator",
