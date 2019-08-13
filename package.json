@@ -2,7 +2,7 @@
   "name": "entu-ssg-app",
   "public": false,
   "productName": "Entu SSG",
-  "version": "5.0.6",
+  "version": "5.0.7",
   "author": "Argo Roots <argo@roots.ee>",
   "description": "Simple Pug (Jade), Markdown, Yaml static site generator",
   "keywords": [
@@ -30,12 +30,12 @@
     "pack": "electron-packager . --overwrite --asar --out=release"
   },
   "dependencies": {
-    "async": "3.0.1",
-    "entu-ssg": "5.0.6",
-    "simple-git": "1.115.0"
+    "async": "3.1.0",
+    "entu-ssg": "5.0.7",
+    "simple-git": "1.124.0"
   },
   "devDependencies": {
-    "electron": "4.1.4",
-    "electron-packager": "13.1.1"
+    "electron": "4.2.9",
+    "electron-packager": "14.0.4"
   }
 }
