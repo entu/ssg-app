@@ -1,5 +1,7 @@
-const electron = require('electron')
-const {app, BrowserWindow, Menu} = electron
+'use strict'
+
+const {app, shell, BrowserWindow, Menu} = require('electron')
+const path = require('path')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -15,6 +17,9 @@ let createWindow = () => {
         titleBarStyle: 'hiddenInset',
         title: 'Entu SSG',
         backgroundColor: '#ffffff',
+        webPreferences: {
+            preload: path.join(__dirname, 'preload.js')
+        }
     })
 
     // and load the index.html of the app.
@@ -117,13 +122,13 @@ let template = [{
     submenu: [{
         label: 'Learn More',
         click: () => {
-            electron.shell.openExternal('https://entu.site')
+            shell.openExternal('https://entu.site')
         }
     }]
 }]
 
 if (process.platform === 'darwin') {
-    const name = electron.app.getName()
+    const name = app.getName()
     template.unshift({
         label: name,
         submenu: [{

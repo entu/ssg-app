@@ -1,14 +1,13 @@
 'use strict'
 
-const { remote } = require('electron')
-const { app, dialog, shell } = remote
-const async = require('async')
-const git = require('simple-git')
-const path = require('path')
-
-const renderer = require('entu-ssg')
-
-
+const app = window.PRELOAD.app
+const async = window.PRELOAD.async
+const dialog = window.PRELOAD.dialog
+const git = window.PRELOAD.git
+const path = window.PRELOAD.path
+const remote = window.PRELOAD.remote
+const renderer = window.PRELOAD.renderer
+const shell = window.PRELOAD.shell
 
 var confFile = localStorage.getItem('confFile')
 var render
