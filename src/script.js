@@ -124,7 +124,7 @@ var openConf = () => {
 
 
 var openConfFile = () => {
-    var files = dialog.showOpenDialog({
+    var files = dialog.showOpenDialogSync({
         properties: ['openFile'],
         filters: [
             { name: 'Yaml files', extensions: ['yaml'] }
@@ -244,7 +244,7 @@ var addLog = (event, source, build) => {
     document.getElementById('log-table').innerHTML = document.getElementById('log-table').innerHTML + `
         <tr class="log">
             <td style="width:5%">${event}</td>
-            <td style="width:5%"><a href="javascript:shell.showItemInFolder('${source}')" title="${source}">${source.replace(render.sourceDir ,'.')}</a></td>
+            <td style="width:5%"><a href="javascript:shell.showItemInFolder('${source}')" title="${source}">${source.replace(render.sourceDir, '.')}</a></td>
             <td style="width:90%">${links.join('<br>')}</td>
         </tr>
     `
