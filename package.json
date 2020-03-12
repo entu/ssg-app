@@ -3,6 +3,7 @@
   "public": false,
   "productName": "Entu SSG",
   "version": "5.1.1",
+  "version": "5.2.0",
   "author": "Argo Roots <argo@roots.ee>",
   "description": "Simple Pug (Jade), Markdown, Yaml static site generator",
   "keywords": [
@@ -27,15 +28,16 @@
   "main": "src/main.js",
   "scripts": {
     "start": "electron src/main.js",
-    "pack": "electron-packager . --overwrite --asar --out=release"
+    "pack": "electron-packager . --overwrite --asar --osx-sign --out=release",
+    "pack-osx": "electron-packager . --overwrite --asar --prune=true --osx-sign --out=release --app-bundle-id=\"ee.entu.ssg\""
   },
   "dependencies": {
     "async": "3.1.0",
-    "entu-ssg": "5.1.0",
+    "entu-ssg": "5.2.3",
     "simple-git": "1.126.0"
   },
   "devDependencies": {
-    "electron": "6.0.8",
+    "electron": "6.0.10",
     "electron-packager": "14.0.6"
   }
 }
