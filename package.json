@@ -31,11 +31,11 @@
   },
   "dependencies": {
     "async": "3.2.0",
-    "entu-ssg": "5.2.8",
-    "simple-git": "2.24.0"
+    "entu-ssg": "5.2.10",
+    "simple-git": "2.37.0"
   },
   "devDependencies": {
-    "electron": "9.3.5",
-    "electron-packager": "15.1.0"
+    "electron": "9.4.4",
+    "electron-packager": "15.2.0"
   }
 }
